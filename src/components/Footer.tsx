@@ -1,16 +1,16 @@
-import { companyInfo } from '@/constants/companyInfo';
-import { Mail, MapPin, Phone } from 'lucide-react';
-import Link from 'next/link';
-import logo from '../../public/logo.jpg';
-import Image from 'next/image';
+import { companyInfo } from "@/constants/companyInfo";
+import { Mail, MapPin, Phone } from "lucide-react";
+import Link from "next/link";
+import logo from "../../public/logo.jpg";
+import Image from "next/image";
 
 const Footer = () => {
     const quickLinks = [
-        { name: '服務項目', path: '/services' },
-        { name: '關於我們', path: '/about' },
-        { name: '常見問題', path: '/faq' },
-        { name: '聯絡我們', path: '/contact' },
-        { name: '專業文章', path: '/blog' },
+        { name: "服務項目", path: "/services" },
+        { name: "關於我們", path: "/about" },
+        { name: "常見問題", path: "/faq" },
+        { name: "聯絡我們", path: "/contact" },
+        { name: "專業文章", path: "/blog" },
     ];
 
     return (
