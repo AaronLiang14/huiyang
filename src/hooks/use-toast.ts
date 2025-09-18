@@ -1,3 +1,4 @@
+"use client";
 import type { ToastActionElement, ToastProps } from "@/components/ui";
 import type { ReactNode } from "react";
 import { useEffect, useState } from "react";
