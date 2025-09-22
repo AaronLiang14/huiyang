@@ -95,7 +95,9 @@ const Product = () => {
                             <Card
                                 key={service.id}
                                 className={`relative group hover:shadow-hover transition-all duration-300 border-0 shadow-card ${
-                                    service.popular ? "ring-2 ring-primary/20" : ""
+                                    service.popular
+                                        ? "ring-2 ring-primary/20 border-2 border-gray-300"
+                                        : ""
                                 }`}
                             >
                                 {service.popular && (
@@ -212,14 +214,22 @@ const Product = () => {
                         我們提供免費諮詢服務，讓您瞭解最適合的稅務、財務解決方案。
                         立即聯絡我們，開始您的財務優化之路。
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center ">
                         <Link href="/contact">
-                            <Button variant="secondary" size="lg" className="shadow-hover">
+                            <Button
+                                variant="secondary"
+                                size="lg"
+                                className="shadow-hover cursor-pointer"
+                            >
                                 免費諮詢
                             </Button>
                         </Link>
                         <Link href="/about">
-                            <Button variant="secondary" size="lg" className="shadow-hover">
+                            <Button
+                                variant="secondary"
+                                size="lg"
+                                className="shadow-hover cursor-pointer"
+                            >
                                 瞭解我們
                             </Button>
                         </Link>
