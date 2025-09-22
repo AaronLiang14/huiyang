@@ -30,7 +30,7 @@ export default function Home() {
                         <Link href="/contact" className="items-center">
                             <Button
                                 size="lg"
-                                className="shadow-hover hover:shadow-card transition-all duration-300"
+                                className="shadow-hover hover:shadow-card transition-all duration-300 cursor-pointer"
                             >
                                 立即諮詢
                             </Button>
@@ -39,7 +39,7 @@ export default function Home() {
                             <Button
                                 variant="outline"
                                 size="lg"
-                                className="hover:shadow-soft transition-all duration-300"
+                                className="hover:shadow-soft transition-all duration-300 cursor-pointer"
                             >
                                 瞭解服務
                             </Button>
@@ -61,7 +61,7 @@ export default function Home() {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <Card className="group hover:shadow-hover transition-all duration-300 border-0 shadow-card">
+                        <Card className="group transition-all duration-300 border-0 shadow-card hover:shadow-hover">
                             <CardContent className="p-8 text-center">
                                 <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
                                     <Calculator className="h-8 w-8 text-primary" />

@@ -23,9 +23,9 @@ const Header = () => {
     const isActive = (path: string) => pathname === path;
 
     return (
-        <header>
-            <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border shadow-soft">
-                <div className="container mx-auto px-4">
+        <header className="sticky top-0 z-50 w-full">
+            <nav className="bg-white/95 backdrop-blur-sm  border-border shadow-soft">
+                <div className="px-4 w-full ">
                     <div className="flex items-center justify-between h-16">
                         {/* Logo */}
                         <Link href="/" className="flex items-center space-x-2 group">
