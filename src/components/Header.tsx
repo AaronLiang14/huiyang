@@ -24,7 +24,7 @@ const Header = () => {
 
     return (
         <header>
-            <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border shadow-soft">
+            <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border shadow-soft">
                 <div className="container mx-auto px-4">
                     <div className="flex items-center justify-between h-16">
                         {/* Logo */}
@@ -52,7 +52,7 @@ const Header = () => {
                                 <Link
                                     key={item.path}
                                     href={item.path}
-                                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-accent hover:text-accent-foreground ${
+                                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-accent hover:text-foreground ${
                                         isActive(item.path)
                                             ? "bg-primary text-primary-foreground shadow-soft"
                                             : "text-foreground"
@@ -74,7 +74,7 @@ const Header = () => {
 
                     {/* Mobile Navigation */}
                     {isMenuOpen && (
-                        <div className="md:hidden border-t border-border bg-card">
+                        <div className="md:hidden border-t border-border bg-white">
                             <div className="py-4 space-y-2">
                                 {navItems.map((item) => (
                                     <Link
@@ -83,7 +83,7 @@ const Header = () => {
                                         className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
                                             isActive(item.path)
                                                 ? "bg-primary text-primary-foreground"
-                                                : "text-foreground hover:bg-accent hover:text-accent-foreground"
+                                                : "text-foreground hover:bg-accent hover:text-foreground"
                                         }`}
                                         onClick={() => setIsMenuOpen(false)}
                                     >

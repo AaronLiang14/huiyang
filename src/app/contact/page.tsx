@@ -2,7 +2,7 @@
 import { Button, Card, CardContent, Input, Label, Textarea } from "@/components/ui";
 import { companyInfo } from "@/constants/companyInfo";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/lib/utils";
+// import { supabase } from "@/lib/utils";
 import { Clock, Mail, MapPin, Phone, Send } from "lucide-react";
 import type { ChangeEvent, FormEvent } from "react";
 import { useState } from "react";
@@ -30,31 +30,31 @@ const Contact = () => {
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
-        const { error } = await supabase.from("contactInfo").insert({
-            created_at: new Date().toISOString(),
-            ...formData,
-        });
-        if (error) {
-            toast({
-                variant: "destructive",
-                title: "提交失敗",
-                description: "請稍後再試，或聯絡我們的客服人員。",
-                duration: 4000,
-            });
-        } else {
-            toast({
-                title: "訊息已送出",
-                description: "我們會在24小時內回覆您，謝謝！",
-            });
-            setFormData({
-                name: "",
-                email: "",
-                phone: "",
-                company: "",
-                service: "",
-                message: "",
-            });
-        }
+        // const { error } = await supabase.from("contactInfo").insert({
+        //     created_at: new Date().toISOString(),
+        //     ...formData,
+        // });
+        // if (error) {
+        //     toast({
+        //         variant: "destructive",
+        //         title: "提交失敗",
+        //         description: "請稍後再試，或聯絡我們的客服人員。",
+        //         duration: 4000,
+        //     });
+        // } else {
+        //     toast({
+        //         title: "訊息已送出",
+        //         description: "我們會在24小時內回覆您，謝謝！",
+        //     });
+        //     setFormData({
+        //         name: "",
+        //         email: "",
+        //         phone: "",
+        //         company: "",
+        //         service: "",
+        //         message: "",
+        //     });
+        // }
     };
 
     return (

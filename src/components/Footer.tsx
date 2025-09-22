@@ -14,7 +14,7 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="bg-trust-navy text-primary-foreground">
+        <footer className="bg-primary text-primary-foreground">
             <div className="container mx-auto px-4 py-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Company Info */}
@@ -81,22 +81,6 @@ const Footer = () => {
                                 <span className="opacity-90">{companyInfo.address}</span>
                             </div>
                         </div>
-
-                        {/* Social Links */}
-                        {/* <div className="flex space-x-3 pt-2">
-              <a
-                href="#"
-                className="p-2 bg-primary-foreground/10 rounded-lg hover:bg-accent-gold hover:text-trust-navy transition-all duration-200"
-              >
-                <Facebook className="h-4 w-4" />
-              </a>
-              <a
-                href="#"
-                className="p-2 bg-primary-foreground/10 rounded-lg hover:bg-accent-gold hover:text-trust-navy transition-all duration-200"
-              >
-                <Linkedin className="h-4 w-4" />
-              </a>
-            </div> */}
                     </div>
                 </div>
 

@@ -79,7 +79,7 @@ const About = () => {
                                         <h3 className="text-xl font-semibold text-primary mb-2">
                                             王月惠
                                         </h3>
-                                        <p className="text-trust-navy font-medium mb-3">
+                                        <p className="text-primary font-medium mb-3">
                                             事務所負責人 / 執業記帳士
                                         </p>
                                         <div className="flex flex-wrap gap-2 mb-4">
@@ -110,7 +110,7 @@ const About = () => {
                                         <h3 className="text-xl font-semibold text-primary mb-2">
                                             梁百揚
                                         </h3>
-                                        <p className="text-trust-navy font-medium mb-3">
+                                        <p className="text-primary font-medium mb-3">
                                             工商部門主管
                                         </p>
                                         <div className="flex flex-wrap gap-2 mb-4">

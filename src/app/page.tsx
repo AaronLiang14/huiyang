@@ -8,7 +8,7 @@ export default function Home() {
             {/* Hero Section */}
             <section className="relative bg-gradient-hero py-20 px-4">
                 <div className="container mx-auto text-center">
-                    <div className="mb-6 inline-flex items-center space-x-2 bg-card/80 backdrop-blur-sm rounded-full px-6 py-3 shadow-soft">
+                    <div className="mb-6 inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 shadow-soft">
                         <Shield className="h-5 w-5 text-primary" />
                         <span className="text-sm font-medium text-primary">
                             台灣合格記帳士事務所
@@ -18,7 +18,7 @@ export default function Home() {
                     <h1 className="text-4xl md:text-6xl font-bold text-primary mb-6 leading-tight">
                         專業記帳服務
                         <br />
-                        <span className="text-trust-navy">值得信賴的財務夥伴</span>
+                        <span className="text-primary">值得信賴的財務夥伴</span>
                     </h1>
 
                     <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
