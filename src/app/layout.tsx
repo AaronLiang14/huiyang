@@ -1,5 +1,7 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
+import { PageContainer } from "@/components/PageContainer";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -17,8 +19,9 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body>
+                <ScrollToTop />
                 <Header />
-                {children}
+                <PageContainer>{children}</PageContainer>
                 <Footer />
             </body>
         </html>

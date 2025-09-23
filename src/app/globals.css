@@ -48,22 +48,7 @@
     .bg-gradient-card {
         background-image: linear-gradient(180deg, #ffffff, #e8e0d9);
     }
-    /* Custom shadow utilities mapping to design tokens */
-    .shadow-soft {
-        box-shadow: var(--shadow-soft);
-    }
     .shadow-card {
-        box-shadow: var(--shadow-card);
-    }
-    .shadow-hover {
-        box-shadow: var(--shadow-hover);
-    }
-}
-
-@layer base {
-    :root {
-        --shadow-soft: 0 4px 20px -8px hsl(215 60% 20% / 0.15);
-        --shadow-card: 0 8px 30px -12px hsl(215 60% 20% / 0.12);
-        --shadow-hover: 0 12px 40px -16px hsl(215 60% 20% / 0.2);
+        box-shadow: 0 8px 30px -12px rgba(20, 46, 82, 0.12);
     }
 }

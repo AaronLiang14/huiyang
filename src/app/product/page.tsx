@@ -76,166 +76,158 @@ const Product = () => {
     ];
 
     return (
-        <div className="min-h-screen py-20 px-4">
-            <div className="container mx-auto">
-                {/* Header */}
-                <div className="text-center mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">服務項目</h1>
-                    <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                        提供完整的稅務、財務服務解決方案，從基礎記帳到進階稅務、財務顧問，
-                        滿足不同規模企業的需求，讓您專注於事業發展。
-                    </p>
-                </div>
+        <div className="container mx-auto px-4 py-20">
+            {/* Header */}
+            <div className="mb-16 text-center">
+                <h1 className="text-primary mb-6 text-4xl font-bold md:text-5xl">服務項目</h1>
+                <p className="text-muted-foreground mx-auto max-w-3xl text-lg leading-relaxed">
+                    提供完整的稅務、財務服務解決方案，從基礎記帳到進階稅務、財務顧問，
+                    滿足不同規模企業的需求，讓您專注於事業發展。
+                </p>
+            </div>
 
-                {/* Service Cards */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
-                    {products.map((service) => {
-                        const IconComponent = service.icon;
-                        return (
-                            <Card
-                                key={service.id}
-                                className={`relative group hover:shadow-hover transition-all duration-300 border-0 shadow-card ${
-                                    service.popular
-                                        ? "ring-2 ring-primary/20 border-2 border-gray-300"
-                                        : ""
-                                }`}
-                            >
-                                {service.popular && (
-                                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                                        <Badge className="bg-primary text-primary-foreground shadow-soft">
-                                            <Star className="h-3 w-3 mr-1" />
-                                            最受歡迎
-                                        </Badge>
-                                    </div>
-                                )}
-
-                                <CardContent className="p-8">
-                                    <div className="flex items-start gap-4 mb-6">
-                                        <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                                            <IconComponent className="h-8 w-8 text-primary" />
-                                        </div>
-                                        <div className="flex-1">
-                                            <h3 className="text-xl font-semibold text-primary mb-2">
-                                                {service.title}
-                                            </h3>
-                                            <p className="text-muted-foreground">
-                                                {service.description}
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
-                                        {service.features.map((feature, index) => {
-                                            return (
-                                                <div
-                                                    key={index}
-                                                    className="flex items-center space-x-3"
-                                                >
-                                                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                                                    <span className="text-sm text-foreground">
-                                                        {feature}
-                                                    </span>
-                                                </div>
-                                            );
-                                        })}
-                                    </div>
-                                </CardContent>
-                            </Card>
-                        );
-                    })}
-                </div>
-
-                {/* Additional products */}
-                <section className="mb-20">
-                    <h2 className="text-3xl font-bold text-primary text-center mb-12">
-                        其他專業服務
-                    </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <Card className="group hover:shadow-hover transition-all duration-300 border-0 shadow-card">
-                            <CardContent className="p-6 text-center">
-                                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                                    <FileText className="h-6 w-6 text-primary" />
+            {/* Service Cards */}
+            <div className="mb-20 grid grid-cols-1 gap-8 lg:grid-cols-2">
+                {products.map((service) => {
+                    const IconComponent = service.icon;
+                    return (
+                        <Card
+                            key={service.id}
+                            className={`group hover:shadow-hover shadow-card relative border-0 transition-all duration-300 ${
+                                service.popular
+                                    ? "ring-primary/20 border-2 border-gray-300 ring-2"
+                                    : ""
+                            }`}
+                        >
+                            {service.popular && (
+                                <div className="absolute -top-3 left-1/2 -translate-x-1/2 transform">
+                                    <Badge className="bg-primary text-primary-foreground">
+                                        <Star className="mr-1 h-3 w-3" />
+                                        最受歡迎
+                                    </Badge>
                                 </div>
-                                <h3 className="text-lg font-semibold text-primary mb-2">
-                                    稅務協商
-                                </h3>
-                                <p className="text-muted-foreground text-sm">
-                                    提供專業的稅務協商服務，協助企業解決稅務爭議
-                                </p>
+                            )}
+
+                            <CardContent className="p-8">
+                                <div className="mb-6 flex items-start gap-4">
+                                    <div className="bg-primary/10 group-hover:bg-primary/20 flex h-16 w-16 items-center justify-center rounded-2xl transition-colors">
+                                        <IconComponent className="text-primary h-8 w-8" />
+                                    </div>
+                                    <div className="flex-1">
+                                        <h3 className="text-primary mb-2 text-xl font-semibold">
+                                            {service.title}
+                                        </h3>
+                                        <p className="text-muted-foreground">
+                                            {service.description}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className="grid grid-cols-1 items-center gap-4 sm:grid-cols-2">
+                                    {service.features.map((feature, index) => {
+                                        return (
+                                            <div
+                                                key={index}
+                                                className="flex items-center space-x-3"
+                                            >
+                                                <CheckCircle className="text-primary h-4 w-4 flex-shrink-0" />
+                                                <span className="text-foreground text-sm">
+                                                    {feature}
+                                                </span>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
                             </CardContent>
                         </Card>
-                    </div>
-                </section>
-
-                {/* Service Process */}
-                <section className="mb-20 bg-gradient-card rounded-3xl p-12">
-                    <h2 className="text-3xl font-bold text-primary text-center mb-12">服務流程</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                        <div className="text-center">
-                            <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4 text-primary-foreground font-bold text-xl">
-                                1
-                            </div>
-                            <h3 className="font-semibold text-primary mb-2">初次諮詢</h3>
-                            <p className="text-sm text-muted-foreground">瞭解企業需求與現況</p>
-                        </div>
-
-                        <div className="text-center">
-                            <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4 text-primary-foreground font-bold text-xl">
-                                2
-                            </div>
-                            <h3 className="font-semibold text-primary mb-2">方案規劃</h3>
-                            <p className="text-sm text-muted-foreground">
-                                量身打造最適合的服務方案
-                            </p>
-                        </div>
-
-                        <div className="text-center">
-                            <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4 text-primary-foreground font-bold text-xl">
-                                3
-                            </div>
-                            <h3 className="font-semibold text-primary mb-2">服務執行</h3>
-                            <p className="text-sm text-muted-foreground">專業團隊開始提供服務</p>
-                        </div>
-
-                        <div className="text-center">
-                            <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4 text-primary-foreground font-bold text-xl">
-                                4
-                            </div>
-                            <h3 className="font-semibold text-primary mb-2">定期檢討</h3>
-                            <p className="text-sm text-muted-foreground">持續優化服務品質</p>
-                        </div>
-                    </div>
-                </section>
-
-                {/* CTA Section */}
-                <section className="text-center bg-primary rounded-3xl p-12 text-primary-foreground">
-                    <h2 className="text-3xl font-bold mb-6">準備開始合作了嗎？</h2>
-                    <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
-                        我們提供免費諮詢服務，讓您瞭解最適合的稅務、財務解決方案。
-                        立即聯絡我們，開始您的財務優化之路。
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center ">
-                        <Link href="/contact">
-                            <Button
-                                variant="secondary"
-                                size="lg"
-                                className="shadow-hover cursor-pointer"
-                            >
-                                免費諮詢
-                            </Button>
-                        </Link>
-                        <Link href="/about">
-                            <Button
-                                variant="secondary"
-                                size="lg"
-                                className="shadow-hover cursor-pointer"
-                            >
-                                瞭解我們
-                            </Button>
-                        </Link>
-                    </div>
-                </section>
+                    );
+                })}
             </div>
+
+            {/* Additional products */}
+            <section className="mb-20">
+                <h2 className="text-primary mb-12 text-center text-3xl font-bold">其他專業服務</h2>
+                <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+                    <Card className="group hover:shadow-hover shadow-card border-0 transition-all duration-300">
+                        <CardContent className="p-6 text-center">
+                            <div className="bg-primary/10 group-hover:bg-primary/20 mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl transition-colors">
+                                <FileText className="text-primary h-6 w-6" />
+                            </div>
+                            <h3 className="text-primary mb-2 text-lg font-semibold">稅務協商</h3>
+                            <p className="text-muted-foreground text-sm">
+                                提供專業的稅務協商服務，協助企業解決稅務爭議
+                            </p>
+                        </CardContent>
+                    </Card>
+                </div>
+            </section>
+
+            {/* Service Process */}
+            <section className="bg-gradient-card mb-20 rounded-3xl p-12">
+                <h2 className="text-primary mb-12 text-center text-3xl font-bold">服務流程</h2>
+                <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+                    <div className="text-center">
+                        <div className="bg-primary text-primary-foreground mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl text-xl font-bold">
+                            1
+                        </div>
+                        <h3 className="text-primary mb-2 font-semibold">初次諮詢</h3>
+                        <p className="text-muted-foreground text-sm">瞭解企業需求與現況</p>
+                    </div>
+
+                    <div className="text-center">
+                        <div className="bg-primary text-primary-foreground mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl text-xl font-bold">
+                            2
+                        </div>
+                        <h3 className="text-primary mb-2 font-semibold">方案規劃</h3>
+                        <p className="text-muted-foreground text-sm">量身打造最適合的服務方案</p>
+                    </div>
+
+                    <div className="text-center">
+                        <div className="bg-primary text-primary-foreground mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl text-xl font-bold">
+                            3
+                        </div>
+                        <h3 className="text-primary mb-2 font-semibold">服務執行</h3>
+                        <p className="text-muted-foreground text-sm">專業團隊開始提供服務</p>
+                    </div>
+
+                    <div className="text-center">
+                        <div className="bg-primary text-primary-foreground mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl text-xl font-bold">
+                            4
+                        </div>
+                        <h3 className="text-primary mb-2 font-semibold">定期檢討</h3>
+                        <p className="text-muted-foreground text-sm">持續優化服務品質</p>
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="bg-primary text-primary-foreground rounded-3xl p-12 text-center">
+                <h2 className="mb-6 text-3xl font-bold">準備開始合作了嗎？</h2>
+                <p className="mx-auto mb-8 max-w-2xl text-lg opacity-90">
+                    我們提供免費諮詢服務，讓您瞭解最適合的稅務、財務解決方案。
+                    立即聯絡我們，開始您的財務優化之路。
+                </p>
+                <div className="flex flex-col justify-center gap-4 sm:flex-row">
+                    <Link href="/contact">
+                        <Button
+                            variant="secondary"
+                            size="lg"
+                            className="shadow-hover cursor-pointer"
+                        >
+                            免費諮詢
+                        </Button>
+                    </Link>
+                    <Link href="/about">
+                        <Button
+                            variant="secondary"
+                            size="lg"
+                            className="shadow-hover cursor-pointer"
+                        >
+                            瞭解我們
+                        </Button>
+                    </Link>
+                </div>
+            </section>
         </div>
     );
 };

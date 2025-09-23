@@ -4,33 +4,33 @@ import Link from "next/link";
 
 export default function Home() {
     return (
-        <div className="min-h-screen">
+        <div>
             {/* Hero Section */}
-            <section className="relative bg-gradient-hero py-20 px-4">
+            <section className="bg-gradient-hero relative px-4 py-20">
                 <div className="container mx-auto text-center">
-                    <div className="mb-6 inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 shadow-soft">
-                        <Shield className="h-5 w-5 text-primary" />
-                        <span className="text-sm font-medium text-primary">
+                    <div className="mb-6 inline-flex items-center space-x-2 rounded-full bg-white/80 px-6 py-3 shadow backdrop-blur-sm">
+                        <Shield className="text-primary h-5 w-5" />
+                        <span className="text-primary text-sm font-medium">
                             台灣合格記帳士事務所
                         </span>
                     </div>
 
-                    <h1 className="text-4xl md:text-6xl font-bold text-primary mb-6 leading-tight">
+                    <h1 className="text-primary mb-6 text-4xl leading-tight font-bold md:text-6xl">
                         專業記帳服務
                         <br />
                         <span className="text-primary">值得信賴的財務夥伴</span>
                     </h1>
 
-                    <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-muted-foreground mx-auto mb-8 max-w-2xl text-lg leading-relaxed md:text-xl">
                         提供企業記帳、稅務申報、薪資計算等全方位財務服務，
                         讓您專注於事業發展，稅務會計、財務管理交給我們。
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex flex-col justify-center gap-4 sm:flex-row">
                         <Link href="/contact" className="items-center">
                             <Button
                                 size="lg"
-                                className="shadow-hover hover:shadow-card transition-all duration-300 cursor-pointer"
+                                className="cursor-pointer transition-all duration-300"
                             >
                                 立即諮詢
                             </Button>
@@ -39,7 +39,7 @@ export default function Home() {
                             <Button
                                 variant="outline"
                                 size="lg"
-                                className="hover:shadow-soft transition-all duration-300 cursor-pointer"
+                                className="cursor-pointer transition-all duration-300"
                             >
                                 瞭解服務
                             </Button>
@@ -49,24 +49,24 @@ export default function Home() {
             </section>
 
             {/* Features Section */}
-            <section className="py-20 px-4">
+            <section className="px-4 py-20">
                 <div className="container mx-auto">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+                    <div className="mb-16 text-center">
+                        <h2 className="text-primary mb-4 text-3xl font-bold md:text-4xl">
                             為什麼選擇惠揚記帳士事務所？
                         </h2>
-                        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                        <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
                             我們致力於提供最專業、最可靠的稅務、財務服務，成為您事業成功的重要支柱。
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <Card className="group transition-all duration-300 border-0 shadow-card hover:shadow-hover">
+                    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                        <Card className="border-0 shadow transition-all duration-300 hover:shadow-lg">
                             <CardContent className="p-8 text-center">
-                                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
-                                    <Calculator className="h-8 w-8 text-primary" />
+                                <div className="bg-primary/10 group-hover:bg-primary/20 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl transition-colors">
+                                    <Calculator className="text-primary h-8 w-8" />
                                 </div>
-                                <h3 className="text-xl font-semibold text-primary mb-4">
+                                <h3 className="text-primary mb-4 text-xl font-semibold">
                                     專業記帳
                                 </h3>
                                 <p className="text-muted-foreground leading-relaxed">
@@ -75,12 +75,12 @@ export default function Home() {
                             </CardContent>
                         </Card>
 
-                        <Card className="group hover:shadow-hover transition-all duration-300 border-0 shadow-card">
+                        <Card className="border-0 shadow transition-all duration-300 hover:shadow-lg">
                             <CardContent className="p-8 text-center">
-                                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
-                                    <Shield className="h-8 w-8 text-primary" />
+                                <div className="bg-primary/10 group-hover:bg-primary/20 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl transition-colors">
+                                    <Shield className="text-primary h-8 w-8" />
                                 </div>
-                                <h3 className="text-xl font-semibold text-primary mb-4">
+                                <h3 className="text-primary mb-4 text-xl font-semibold">
                                     合規保障
                                 </h3>
                                 <p className="text-muted-foreground leading-relaxed">
@@ -89,12 +89,12 @@ export default function Home() {
                             </CardContent>
                         </Card>
 
-                        <Card className="group hover:shadow-hover transition-all duration-300 border-0 shadow-card">
+                        <Card className="border-0 shadow transition-all duration-300 hover:shadow-lg">
                             <CardContent className="p-8 text-center">
-                                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
-                                    <TrendingUp className="h-8 w-8 text-primary" />
+                                <div className="bg-primary/10 group-hover:bg-primary/20 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl transition-colors">
+                                    <TrendingUp className="text-primary h-8 w-8" />
                                 </div>
-                                <h3 className="text-xl font-semibold text-primary mb-4">
+                                <h3 className="text-primary mb-4 text-xl font-semibold">
                                     財務優化
                                 </h3>
                                 <p className="text-muted-foreground leading-relaxed">
@@ -107,25 +107,25 @@ export default function Home() {
             </section>
 
             {/* Services Preview */}
-            <section className="py-20 px-4 bg-gradient-card">
+            <section className="bg-gradient-card px-4 py-20">
                 <div className="container mx-auto">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+                    <div className="mb-16 text-center">
+                        <h2 className="text-primary mb-4 text-3xl font-bold md:text-4xl">
                             完整服務項目
                         </h2>
-                        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                        <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
                             從基礎記帳到進階稅務顧問，提供企業各階段所需的專業服務。
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
                         <div className="space-y-6">
                             <div className="flex items-start space-x-4">
-                                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center mt-1">
-                                    <CheckCircle className="h-5 w-5 text-primary-foreground" />
+                                <div className="bg-primary mt-1 flex h-8 w-8 items-center justify-center rounded-lg">
+                                    <CheckCircle className="text-primary-foreground h-5 w-5" />
                                 </div>
                                 <div>
-                                    <h3 className="text-lg font-semibold text-primary mb-2">
+                                    <h3 className="text-primary mb-2 text-lg font-semibold">
                                         企業記帳服務
                                     </h3>
                                     <p className="text-muted-foreground">
@@ -135,11 +135,11 @@ export default function Home() {
                             </div>
 
                             <div className="flex items-start space-x-4">
-                                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center mt-1">
-                                    <CheckCircle className="h-5 w-5 text-primary-foreground" />
+                                <div className="bg-primary mt-1 flex h-8 w-8 items-center justify-center rounded-lg">
+                                    <CheckCircle className="text-primary-foreground h-5 w-5" />
                                 </div>
                                 <div>
-                                    <h3 className="text-lg font-semibold text-primary mb-2">
+                                    <h3 className="text-primary mb-2 text-lg font-semibold">
                                         稅務申報代理
                                     </h3>
                                     <p className="text-muted-foreground">
@@ -149,11 +149,11 @@ export default function Home() {
                             </div>
 
                             <div className="flex items-start space-x-4">
-                                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center mt-1">
-                                    <CheckCircle className="h-5 w-5 text-primary-foreground" />
+                                <div className="bg-primary mt-1 flex h-8 w-8 items-center justify-center rounded-lg">
+                                    <CheckCircle className="text-primary-foreground h-5 w-5" />
                                 </div>
                                 <div>
-                                    <h3 className="text-lg font-semibold text-primary mb-2">
+                                    <h3 className="text-primary mb-2 text-lg font-semibold">
                                         薪資計算管理
                                     </h3>
                                     <p className="text-muted-foreground">
@@ -163,11 +163,11 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <Card className="shadow-card border-0 lg:ml-8">
+                        <Card className="border-0 lg:ml-8">
                             <CardContent className="p-8">
-                                <div className="flex items-center space-x-3 mb-6">
-                                    <Star className="h-6 w-6 text-accent-gold" />
-                                    <h3 className="text-xl font-semibold text-primary">
+                                <div className="mb-6 flex items-center space-x-3">
+                                    <Star className="text-accent-gold h-6 w-6" />
+                                    <h3 className="text-primary text-xl font-semibold">
                                         專業顧問服務
                                     </h3>
                                 </div>
@@ -184,17 +184,17 @@ export default function Home() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-20 px-4 bg-primary text-primary-foreground">
+            <section className="bg-primary text-primary-foreground px-4 py-20">
                 <div className="container mx-auto text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-6">準備開始合作了嗎？</h2>
-                    <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
+                    <h2 className="mb-6 text-3xl font-bold md:text-4xl">準備開始合作了嗎？</h2>
+                    <p className="mx-auto mb-8 max-w-2xl text-lg opacity-90">
                         聯絡我們獲得免費諮詢，讓專業團隊為您量身打造最適合的稅務、財務服務方案。
                     </p>
                     <Link href="/contact">
                         <Button
                             variant="secondary"
                             size="lg"
-                            className="shadow-hover hover:shadow-card transition-all duration-300"
+                            className="cursor-pointer transition-all duration-300"
                         >
                             立即聯絡我們
                         </Button>
