@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { PageContainer } from "@/components/PageContainer";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import type { Metadata } from "next";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -19,6 +20,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body>
+                <Toaster />
                 <ScrollToTop />
                 <Header />
                 <PageContainer>{children}</PageContainer>
