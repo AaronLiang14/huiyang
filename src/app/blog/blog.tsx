@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui";
-import { BookOpen, TrendingUp } from "lucide-react";
+import { BookOpen } from "lucide-react";
 import { useState } from "react";
 import { ArticleCard } from "./ArticleCard";
 import { categories } from "./constants";
@@ -31,7 +31,7 @@ export const Blog = ({ articles }: { articles: any }) => {
                 </div>
 
                 {/* Featured Posts */}
-                {articles.length > 0 && (
+                {/* {articles.length > 0 && (
                     <section className="mb-16">
                         <h2 className="text-primary mb-8 flex items-center text-2xl font-bold">
                             <TrendingUp className="mr-3 h-6 w-6" />
@@ -43,7 +43,7 @@ export const Blog = ({ articles }: { articles: any }) => {
                             ))}
                         </div>
                     </section>
-                )}
+                )} */}
 
                 {/* Category Filter */}
                 <section className="mb-12">
